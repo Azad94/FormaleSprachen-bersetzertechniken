@@ -1,0 +1,21 @@
+package rec;
+
+import java.io.IOException;
+
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ANTLRInputStream input = new ANTLRInputStream("");
+	    //ExprRecognizerLexer lexer = new ExprRecognizerLexer(input);
+	    //CommonTokenStream tokens = new CommonTokenStream(lexer);
+	    //ExprRecognizerParser parser = new ExprRecognizerParser(tokens);
+
+	}
+}

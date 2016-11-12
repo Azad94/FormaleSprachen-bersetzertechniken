@@ -1,0 +1,37 @@
+package rec;
+
+import java.io.IOException;
+
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		CharStream input = null;
+		// Pick an input stream (filename from commandline or stdin)
+		if (args.length > 0)
+			try {
+				input = new ANTLRFileStream(args[0]);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		else
+			try {
+				input = new ANTLRInputStream(System.in);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		if(input == null)
+		System.out.println("TRUE");
+		else	
+		System.out.println("FALSE");
+	}
+
+}

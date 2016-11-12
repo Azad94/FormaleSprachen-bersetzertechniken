@@ -1,0 +1,58 @@
+package expr;
+import java.io.IOException;
+
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "";
+		ANTLRInputStream input = new ANTLRInputStream("");
+	    //ExprRecognizerLexer lexer = new ExprRecognizerLexer(input);
+	    //CommonTokenStream tokens = new CommonTokenStream(lexer);
+	    //ExprRecognizerParser parser = new ExprRecognizerParser(tokens);
+		ExpRecLexer lexer = new ExpRecLexer(input);
+		CommonTokenStream tokens = new CommonTokenStream(lexer);
+		ExpRecParser parser = new ExpRecParser(tokens);
+
+	}
+}
+/**
+
+
+	
+	boolean err = true;
+	public ExprRecogParser parser;
+	public String strRepresentation = "";
+	
+	public ExprDataCalculator(String str){
+		this.err = false;
+		ExprRecogLexer lexer = new ExprRecogLexer(new ANTLRInputStream(str));		HAB ICH
+		lexer.addErrorListener(ExprRecogErrorListener.INSTANCE);
+		// create a buffer of tokens pulled from the lexer
+		CommonTokenStream tokens = new CommonTokenStream(lexer);
+		//this.err = checkErr();
+		// create a parser that feeds off the tokens buffer
+		this.parser = new ExprRecogParser(tokens);								HAB ICH
+		this.parser.addErrorListener(ExprRecogErrorListener.INSTANCE);
+		this.tree = this.parser.stat(); // begin parsing at init rule
+		this.err = checkErr();
+		this.strRepresentation = this.tree.toStringTree(this.parser);
+	}
+	
+	public static boolean checkErr() {
+		boolean err = false;
+		if (ExprRecogErrorListener.err) {
+			err = true;
+		}
+		ExprRecogErrorListener.clearErr();
+		return err;
+	}
+}
+
+**/

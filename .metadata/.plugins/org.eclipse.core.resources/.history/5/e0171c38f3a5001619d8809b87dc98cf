@@ -1,0 +1,50 @@
+package expr;
+import java.io.IOException;
+
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "";
+		ANTLRInputStream input = new ANTLRInputStream("");
+		ExpRecLexer lexer = new ExpRecLexer(input);
+		CommonTokenStream tokens = new CommonTokenStream(lexer);
+		ExpRecParser parser = new ExpRecParser(tokens);
+		
+
+	}
+}
+/**
+
+
+	
+	boolean err = true;
+	public ExprRecogParser parser;
+	public String strRepresentation = "";
+	
+	
+		
+		lexer.addErrorListener(ExprRecogErrorListener.INSTANCE);
+		// create a parser that feeds off the tokens buffer
+		this.parser.addErrorListener(ExprRecogErrorListener.INSTANCE);
+		this.tree = this.parser.stat(); // begin parsing at init rule
+		this.err = checkErr();
+	
+		
+	public static boolean checkErr() {
+		boolean err = false;
+		if (ExprRecogErrorListener.err) {
+			err = true;
+		}
+		ExprRecogErrorListener.clearErr();
+		return err;
+	}
+}
+
+**/

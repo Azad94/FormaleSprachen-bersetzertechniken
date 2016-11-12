@@ -1,0 +1,21 @@
+package rec;
+
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		CharStream input = null;
+		// Pick an input stream (filename from commandline or stdin)
+		if (args.length > 0)
+			input = new ANTLRFileStream(args[0]);
+		else
+			input = new ANTLRInputStream(System.in);
+
+	}
+
+}

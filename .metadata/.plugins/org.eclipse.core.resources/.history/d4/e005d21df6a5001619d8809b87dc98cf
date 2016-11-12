@@ -1,0 +1,63 @@
+package expr;
+import java.awt.Dimension;
+import java.io.IOException;
+import java.util.Arrays;
+
+import javax.swing.JFrame;
+
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.gui.TreeViewer;
+
+public class Main {
+	
+	public static void validate(String expression){
+		
+		ANTLRInputStream input = new ANTLRInputStream("");
+		ExpRecLexer lexer = new ExpRecLexer(input);
+		CommonTokenStream tokens = new CommonTokenStream(lexer);
+		ExpRecParser parser = new ExpRecParser(tokens);
+		
+		parser.setBuildParseTree(true);
+		ParserRuleContext pRule = parser.prog();
+		TreeViewer tv = new TreeViewer(Arrays.asList(parser.getRuleNames()), rc);
+		JFrame frame = new JFrame("ParseTree");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setSize(new Dimension(400, 400));
+	    frame.setLocationRelativeTo(null);
+	    frame.add(tv);
+	    frame.setVisible(true);
+		
+		
+		System.out.println("BISHER WILL ICH NOCH");
+		ParseTree tree = parser.stat();
+		System.out.println(tree.toStringTree(parser));
+		
+		
+		/**
+
+
+    parser.setBuildParseTree(true);
+    ParserRuleContext rc = parser.prog();
+    TreeViewer tv = new TreeViewer(Arrays.asList(parser.getRuleNames()), rc);
+    JFrame frame = new JFrame("ParseTree");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(new Dimension(400, 400));
+    frame.setLocationRelativeTo(null);
+    frame.add(tv);
+    frame.setVisible(true);
+		 
+		 */
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "1+3";
+		validate(s);
+
+	}
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="expr.ExpressionLexer"/>
+<fullyQualifiedTypeName name="java.beans.Expression"/>
+<fullyQualifiedTypeName name="org.antlr.v4.runtime.Token"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="halstead.HalsteadLexer"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="MultiSet.Multiset"/>
+<fullyQualifiedTypeName name="org.antlr.v4.runtime.CommonTokenStream"/>
+<fullyQualifiedTypeName name="expr.ExpRecListener"/>
+<fullyQualifiedTypeName name="org.antlr.v4.runtime.tree.ParseTree"/>
+<fullyQualifiedTypeName name="org.antlr.v4.runtime.ParserRuleContext"/>
+<fullyQualifiedTypeName name="org.antlr.v4.runtime.tree.gui.TreeViewer"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.awt.Dimension"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="recDescent.Lexer"/>
+<fullyQualifiedTypeName name="recDescent.Token"/>
+<fullyQualifiedTypeName name="recDescent.RecDesLexer"/>
+</qualifiedTypeNameHistroy>

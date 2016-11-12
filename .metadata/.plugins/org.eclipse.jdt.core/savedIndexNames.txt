@@ -1,0 +1,1 @@
+INDEX VERSION 1.129+/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/.metadata/.plugins/org.eclipse.jdt.core
