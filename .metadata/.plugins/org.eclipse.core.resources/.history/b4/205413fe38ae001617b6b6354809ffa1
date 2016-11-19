@@ -1,0 +1,27 @@
+package test;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import ast.HeteroAST;
+import lexer_parser.*;
+
+public class AstTest {
+
+	@Test
+	public void test() {
+		Lexer lexer = new RecDesLexer("3 + 4 * 5\n");
+		RecDesParser parser = new RecDesParser(lexer);
+		HeteroAST ast = parser.statlist();
+		System.out.println(ast.toStringTree());
+	}
+}
+
+/**
+	Test Fälle
+		lexer = new RecursiveDescentLexer(" 3 + 4 * 5\n");
+		lexer = new RecursiveDescentLexer(" ( 3 + 4 ) * 5\n");
+		lexer = new RecursiveDescentLexer(" 1 + 2  + (5 * 4) + 5\n");
+		lexer = new RecursiveDescentLexer(" 5 / a\n");
+		lexer = new RecursiveDescentLexer(" 1 + 2 + 3 \n");
+**/

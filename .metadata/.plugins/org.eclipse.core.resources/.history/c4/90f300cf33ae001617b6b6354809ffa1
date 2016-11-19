@@ -1,0 +1,15 @@
+package ast;
+
+import lp.Token;
+
+public abstract class ExprNode extends HeteroAST {      
+    
+	/**
+	 * 
+	 * @param token
+	 */
+    public ExprNode(Token token) { 
+    	super(token);
+    }
+    
+}
