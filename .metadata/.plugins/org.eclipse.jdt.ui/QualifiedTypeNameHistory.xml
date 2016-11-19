@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="java.beans.Expression"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.Token"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="halstead.HalsteadLexer"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="MultiSet.Multiset"/>
@@ -19,4 +18,6 @@
 <fullyQualifiedTypeName name="recDescent.Lexer"/>
 <fullyQualifiedTypeName name="recDescent.Token"/>
 <fullyQualifiedTypeName name="recDescent.RecDesLexer"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 </qualifiedTypeNameHistroy>

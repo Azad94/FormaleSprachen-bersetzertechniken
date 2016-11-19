@@ -6,20 +6,11 @@ public class TestRecParser {
 
 	public static void main(String[] args) {
 
-		Lexer lexer = new RecDesLexer(" 5 + (10 - 23)\n");
+		//	" value = (10 - 23)\n"
+		//	" value = (a + 10 - 23)\n"
+		// 	" 1 + 2 + 3\n"
+		Lexer lexer = new RecDesLexer(" 5 + (10 - 23)");
 		RecDesParser parser = new RecDesParser(lexer);
-		parser.statlist();
-		
-		lexer = new RecDesLexer(" value = (10 - 23)\n");
-		parser = new RecDesParser(lexer);
-		parser.statlist();
-		
-		lexer = new RecDesLexer(" value = (a + 10 - 23)\n");
-		parser = new RecDesParser(lexer);
-		parser.statlist();
-		
-		lexer = new RecDesLexer("1 + 2 + 3\n");
-		parser = new RecDesParser(lexer);
 		parser.statlist();
 	}
 }

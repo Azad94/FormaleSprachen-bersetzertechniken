@@ -9,9 +9,9 @@ package recDescent;
  * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
 ***/
 public abstract class Parser {
-    Lexer input;     // from where do we get tokens?
-    Token lookahead; // the current lookahead token
-    Token nextToken; // the token after current
+    Lexer input;     
+    Token lookahead; 
+    Token nextToken; 
     public Parser(Lexer input) { 
     	this.input = input;
     	nextToken = input.nextToken();
