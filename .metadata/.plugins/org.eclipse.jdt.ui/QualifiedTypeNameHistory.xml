@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="halstead.HalsteadLexer"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="MultiSet.Multiset"/>
-<fullyQualifiedTypeName name="org.antlr.v4.runtime.CommonTokenStream"/>
 <fullyQualifiedTypeName name="expr.ExpRecListener"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.tree.ParseTree"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.ParserRuleContext"/>
@@ -28,4 +27,10 @@
 <fullyQualifiedTypeName name="ast.AddNode"/>
 <fullyQualifiedTypeName name="visitor.Visitor"/>
 <fullyQualifiedTypeName name="visitor.EvaluationVisitor"/>
+<fullyQualifiedTypeName name="calc_parse_tree.calcLexer"/>
+<fullyQualifiedTypeName name="org.antlr.v4.runtime.ANTLRInputStream"/>
+<fullyQualifiedTypeName name="org.antlr.v4.runtime.CommonTokenStream"/>
+<fullyQualifiedTypeName name="org.testng.Assert"/>
+<fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
+<fullyQualifiedTypeName name="calc_interpreter.calc_interpreterParser"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="86" started-at="2016-12-07T21:07:43Z" finished-at="2016-12-07T21:07:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="86" started-at="2016-12-07T21:07:43Z" finished-at="2016-12-07T21:07:43Z">
+      <class name="calculator.CalculatorTest">
+        <test-method status="FAIL" signature="f(java.lang.String, int)[pri:0, instance:calculator.CalculatorTest@4678c730]" name="f" duration-ms="0" started-at="2016-12-07T22:07:43Z" finished-at="2016-12-07T22:07:43Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [f] with [class java.lang.String, int].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [f] with [class java.lang.String, int].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:244)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:172)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:458)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:568)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1293)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1020)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1110)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f2(java.lang.String, int)[pri:0, instance:calculator.CalculatorTest@4678c730]" name="f2" duration-ms="51" started-at="2016-12-07T22:07:43Z" data-provider="dataObjects" finished-at="2016-12-07T22:07:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 8 * 5
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[40]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="f2(java.lang.String, int)[pri:0, instance:calculator.CalculatorTest@4678c730]" name="f2" duration-ms="2" started-at="2016-12-07T22:07:43Z" data-provider="dataObjects" finished-at="2016-12-07T22:07:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2^8<10
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="f2(java.lang.String, int)[pri:0, instance:calculator.CalculatorTest@4678c730]" name="f2" duration-ms="3" started-at="2016-12-07T22:07:43Z" data-provider="dataObjects" finished-at="2016-12-07T22:07:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a = 5+2
+a+7
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="f2(java.lang.String, int)[pri:0, instance:calculator.CalculatorTest@4678c730]" name="f2" duration-ms="1" started-at="2016-12-07T22:07:43Z" data-provider="dataObjects" finished-at="2016-12-07T22:07:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a = 5+2
+#
+a+7
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
+      </class> <!-- calculator.CalculatorTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
