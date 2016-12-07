@@ -1,0 +1,46 @@
+package ast;
+
+import recursiveDescent.Expr;
+import recursiveDescent.Token;
+
+public abstract class Binary extends Expr {
+
+	private Expr left;
+	private Expr right;
+
+	public Binary(Expr l, Token t, Expr r) {
+		super(t);
+		this.left = l;
+		this.right = r;
+	}
+
+	public Expr getLeft() {
+		return this.left;
+	}
+
+	public void setLeft(Expr l) {
+		this.left = l;
+	}
+
+	public Expr getRight() {
+		return this.right;
+	}
+
+	public void setRight(Expr r) {
+		this.right = r;
+	}
+
+	public String toStringTree() {
+		if ( left==null || right==null ) return this.toString();
+		StringBuilder buf = new StringBuilder();
+		buf.append("(" );
+		buf.append(this.toString());
+		buf.append(' ' );
+		buf.append(left.toStringTree());
+		buf.append(' ' );
+		buf.append(right.toStringTree());
+		buf.append(")" );
+		return buf.toString();
+		}
+	
+}

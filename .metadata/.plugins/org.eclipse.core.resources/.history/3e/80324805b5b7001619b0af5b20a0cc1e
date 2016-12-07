@@ -1,0 +1,18 @@
+package recursiveDescent;
+
+import recursiveDescent.Token;
+import recursiveDescent.Visitor;
+
+public class Int extends Atomic {
+	
+	private int value;
+
+	public Int(Token t) {
+		super(t);
+		value = Integer.parseInt(t.getText());
+	}
+	public <T> T accept(Visitor<T> Visitor) {
+		return Visitor.visit(this);
+	}
+
+}

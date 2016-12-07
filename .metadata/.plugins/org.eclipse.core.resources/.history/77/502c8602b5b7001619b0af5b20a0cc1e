@@ -1,0 +1,61 @@
+package recursiveDescent;
+
+import ast.Add;
+import ast.Div;
+
+public class IndependentToStringVisitor {
+	public void print(HeteroAST n) {
+        switch ( n.getToken().getType()) {
+            case 2 : print((Add)n); break;
+            case 3 : print((Sub)n); break;
+            case 4 : print((Mul)n); break;
+            case 5 : print((Div)n); break;
+            case 8 : print((Int)n); break;
+            case 12: print((UMinus)n); break;
+            default :
+                // catch unhandled node types
+                throw new UnsupportedOperationException("Node "+
+                          n.getClass().getName()+ " not handled");
+        }
+    }
+
+    public void print(Add n) {
+    	System.out.print("( + ");
+        print(n.getLeft());         
+        print(n.getRight());        
+        System.out.print(") ");
+    }
+
+    public void print(Sub n) {
+    	System.out.print("( - ");
+        print(n.getLeft());         
+        print(n.getRight());        
+        System.out.print(") ");
+    }
+	
+    public void print(Mul n) {
+        System.out.print("( * ");
+        print(n.getLeft());
+        print(n.getRight());
+        System.out.print(") ");
+    }
+	
+    public void print(Div n) {
+        System.out.print("( / ");
+        print(n.getLeft());
+        print(n.getRight());
+        System.out.print(") "); 
+    }
+    
+	
+    public void print(UMinus n) {
+        System.out.print("( -");
+        print(n.getChild());
+        System.out.print(") ");
+    }
+	
+    public void print(Int n) {
+        System.out.print(" " + n.toString() + " ");
+    }
+
+}

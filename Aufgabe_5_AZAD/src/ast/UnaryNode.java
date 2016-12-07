@@ -18,12 +18,12 @@ public class UnaryNode extends ExprNode {
 		buf.append("(");
 		buf.append(this.toString());
 		buf.append(' ');
-		buf.append(left.toStringTree());		
+		buf.append(left.toStringTree());
 		buf.append(")");
 		return buf.toString();
 	}
 
-	public ExprNode getLeft(){
+	public ExprNode getLeft() {
 		return this.left;
 	}
 }

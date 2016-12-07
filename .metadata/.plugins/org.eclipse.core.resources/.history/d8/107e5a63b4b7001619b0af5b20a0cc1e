@@ -1,0 +1,22 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import ast.HeteroAST;
+import lexer_parser.*;
+import visitor.*;
+
+public class VisitorTest {
+	
+	RDLexer lexer4 = new RDLexer("3+2*7-2\n");
+	ASTParser parser4 = new ASTParser(lexer4);
+	IndependentToStringVisitor indepVisitor = new IndependentToStringVisitor();
+	indepVisitor.print(parser4.statlist());
+	
+	RDLexer lexer5 = new RDLexer("3+2*7-2\n");
+	ASTParser parser5 = new ASTParser(lexer5);
+	IndependentEvaluationVisitor indepVisitor2 = new IndependentEvaluationVisitor();
+	System.out.println("\n" + indepVisitor2.eval(parser5.statlist()));
+}

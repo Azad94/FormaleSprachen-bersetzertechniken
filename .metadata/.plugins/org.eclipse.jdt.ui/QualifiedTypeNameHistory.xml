@@ -20,4 +20,12 @@
 <fullyQualifiedTypeName name="recDescent.RecDesLexer"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="ast.ExprNode"/>
+<fullyQualifiedTypeName name="lexer_parser.Lexer"/>
+<fullyQualifiedTypeName name="visitor.IndepTreePrintVisitor"/>
+<fullyQualifiedTypeName name="lexer_parser.RecDesLexer"/>
+<fullyQualifiedTypeName name="ast.HeteroAST"/>
+<fullyQualifiedTypeName name="ast.AddNode"/>
+<fullyQualifiedTypeName name="visitor.Visitor"/>
+<fullyQualifiedTypeName name="visitor.EvaluationVisitor"/>
 </qualifiedTypeNameHistroy>

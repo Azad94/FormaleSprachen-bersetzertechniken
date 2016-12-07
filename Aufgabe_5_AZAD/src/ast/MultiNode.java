@@ -1,6 +1,7 @@
 package ast;
 
 import lexer_parser.Token;
+import visitor.Visitor;
 
 public class MultiNode extends BinaryNode {
 
@@ -8,4 +9,8 @@ public class MultiNode extends BinaryNode {
 		super(left, addToken, right);
 	}
 
+	
+	public <T> T accept(Visitor<T> Visitor) {
+		return Visitor.visit(this);
+	}
 }

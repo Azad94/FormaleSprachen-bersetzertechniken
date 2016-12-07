@@ -1,0 +1,16 @@
+package ast;
+
+import recursiveDescent.Expr;
+import recursiveDescent.Token;
+
+public abstract class Atomic extends Expr {
+
+	public Atomic(Token t) {
+		super(t);
+	}
+
+	public String toStringTree() {
+		return this.toString();
+	}
+	
+}

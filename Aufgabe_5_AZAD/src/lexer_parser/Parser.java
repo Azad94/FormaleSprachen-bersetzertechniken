@@ -12,7 +12,7 @@ import lexer_parser.Token;
  * information.
  ***/
 public abstract class Parser {
-	Lexer input; 
+	Lexer input;
 	Token lookahead;
 	Token nextToken;
 
@@ -22,7 +22,6 @@ public abstract class Parser {
 		consume();
 	}
 
-	/** If lookahead token type matches x, consume & return else error */
 	public void match(int x) {
 		if (lookahead.type == x)
 			consume();

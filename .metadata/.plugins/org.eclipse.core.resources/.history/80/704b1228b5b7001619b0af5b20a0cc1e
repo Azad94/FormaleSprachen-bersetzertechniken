@@ -1,0 +1,184 @@
+package recursiveDescent;
+
+import static lexer_parser.RDLexer.*;
+
+import ast.Add;
+import ast.Binary;
+import ast.Div;
+import ast.Expr;
+import ast.HeteroAST;
+import ast.Int;
+import ast.Mul;
+import ast.Sub;
+import ast.UMinus;
+import lexer_parser.Parser;
+
+public class ASTParser extends Parser {
+
+	public ASTParser(Lexer input) {
+		super(input);
+	}
+
+	public HeteroAST statlist() {
+		HeteroAST ast = null;
+		do {
+			ast = stat();
+		} while (lookahead.type != EOF_TYPE);
+		return ast;
+	}
+
+	public HeteroAST stat() {
+		Expr ast = null;
+		if (lookahead.type == NL) {
+			match(NL);
+		} else {
+			ast = sum();
+			match(NL);
+		}
+		return ast;
+	}
+
+	public Expr sum() {
+		Binary bin = null, oldNode = null, local = null;
+		Expr left = null, right = null;
+		Token t = null;
+
+		left = prod();
+		while (lookahead.type == PLUS || lookahead.type == MINUS) {
+			t = lookahead;
+			if (lookahead.type == PLUS) {
+				if (right != null) {
+					if(local == null){
+						local = bin;
+					}
+					oldNode = bin;
+					left = right;
+					match(PLUS);
+					bin = new Add(left, t, right);
+					oldNode.setRight(bin);
+				} else {
+					match(PLUS);
+					bin = new Add(left, t, right);
+				}
+			} else if (lookahead.type == MINUS) {
+				if (right != null) {
+					if(local == null){
+						local = bin;
+					}
+					oldNode = bin;
+					left = right;
+					match(MINUS);
+					bin = new Sub(left, t, right);
+					oldNode.setRight(bin);
+				} else {
+					match(MINUS);
+					bin = new Sub(left, t, right);
+				}
+			} else {
+				throw new Error(lookahead.type + "+ or - expected");
+			}
+			right = prod();
+		}
+		if(bin == null){
+			return left;
+		}
+		else {
+			bin.setRight(right);
+			if(local == null){
+				return bin;
+			}
+			else {
+				return local;
+			}
+		}
+	}
+
+	public Expr prod() {
+		Binary bin = null, oldNode = null, local = null;
+		Expr left = null, right = null;
+		Token t = null;
+
+		left = term();
+		while (lookahead.type == MUL || lookahead.type == DIV) {
+			t = lookahead;
+			if (lookahead.type == MUL) {
+				if (right != null) {
+					if(local == null){
+						local = bin;
+					}
+					oldNode = bin;
+					left = right;
+					match(MUL);
+					bin = new Mul(left, t, right);
+					oldNode.setRight(bin);
+				} else {
+					match(MUL);
+					bin = new Mul(left, t, right);
+				}
+			} else if (lookahead.type == DIV) {
+				if (right != null) {
+					if(local == null){
+						local = bin;
+					}
+					oldNode = bin;
+					left = right;
+					match(DIV);
+					bin = new Div(left, t, right);
+					oldNode.setRight(bin);
+				} else {
+					match(DIV);
+					bin = new Div(left, t, right);
+				}
+			} else {
+				throw new Error(lookahead.type + " * or / expected");
+			}
+			right = term();
+		}
+		if( bin == null){
+			return left;
+		}
+		else{			
+			bin.setRight(right);
+			if(local == null){
+				return bin;
+			}
+			else {
+				return local;
+			}
+		}
+	}
+
+	public Expr term() {
+		Expr a = null;
+		Token token = lookahead;
+		
+		switch (lookahead.type) {
+		case INT:
+			match(INT);
+			a = new Int(token);
+			break;
+		/*case PLUS:
+			match(PLUS);
+			a = term();
+			break;
+		case MINUS:
+			match(MINUS);
+			a = term();
+			break;*/
+		case UMIN:
+			match(UMIN);
+			Token i = lookahead;
+			match(INT);
+			a = new UMinus(new Int(i), token);
+		case LB:
+			match(LB);
+			a = sum();
+			match(RB);
+			break;
+		default:
+			throw new Error(lookahead.type + "+,-,( ,INTEGER or ID expected");
+		}
+		return a;
+	}
+
+}

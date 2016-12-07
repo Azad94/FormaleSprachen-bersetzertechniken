@@ -1,0 +1,33 @@
+package ast;
+
+import recursiveDescent.Token;
+import recursiveDescent.Visitor;
+
+public abstract class HeteroAST { // Heterogeneous AST node type
+	private Token token; // Node created from which token?
+
+	public HeteroAST() {
+		;
+	}
+
+	public HeteroAST(Token t) {
+		token = t;
+	}
+
+	/** Compute string for single node */
+	public String toString() {
+		return token.text;
+	}
+
+	/** Compute string for a whole tree not just node; default: print token */
+	public abstract String toStringTree();
+	
+	public Token getToken(){
+		return this.token;
+	}
+	
+	public Token setToken(Token t){
+		return this.token = t;
+	}
+	public abstract <T> T accept(Visitor<T> Visitor);
+}

@@ -1,0 +1,93 @@
+package recursiveDescent;
+
+import static lexer_parser.RDLexer.*;
+
+import recursiveDescent.Lexer;
+
+public class RDParser extends Parser {
+
+	public RDParser(Lexer input) {
+		super(input);
+	}
+
+	public void statlist() {
+		do {
+			stat();
+		} while (lookahead.type != EOF_TYPE);
+	}
+
+	public void stat() {
+		if (lookahead.type == NL) {
+			match(NL);
+		} else {
+			sum();
+			match(NL);
+		}
+	}
+
+	public void sum() {
+		switch (lookahead.type) {
+		case PLUS:
+			match(PLUS);
+			break;
+		case MINUS:
+			match(MINUS);
+			break;
+		}
+		prod();
+		while (lookahead.type == PLUS || lookahead.type == MINUS) {
+			if (lookahead.type == PLUS) {
+				match(PLUS);
+			} else if (lookahead.type == MINUS) {
+				match(MINUS);
+			} else {
+				throw new Error(lookahead.type + "+ or - expected");
+			}
+			prod();
+		}
+	}
+
+	public void prod() {
+		term();
+		while (lookahead.type == MUL || lookahead.type == DIV) {
+			if (lookahead.type == MUL) {
+				match(MUL);
+			} else if (lookahead.type == DIV) {
+				match(DIV);
+			} else {
+				throw new Error(lookahead.type + " * or / expected");
+			}
+			term();
+		}
+	}
+
+	public void term() {
+		switch (lookahead.type) {
+		case ID:
+			match(ID);
+			if(lookahead.type == EQ){
+				match(EQ);
+				term();
+			}
+			break;
+		case INT:
+			match(INT);
+			break;
+		case PLUS:
+			match(PLUS);
+			term();
+			break;
+		case MINUS:
+			match(MINUS);
+			term();
+			break;
+		case LB:
+			match(LB);
+			sum();
+			match(RB);
+			break;
+		default:
+			throw new Error(lookahead.type + "+,-,( ,INTEGER or ID expected");
+		}
+	}
+}

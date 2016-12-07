@@ -1,0 +1,32 @@
+package ast;
+
+import recursiveDescent.Token;
+
+abstract class Unary extends Expr {
+
+	private Expr child;
+
+	public Unary(Expr c, Token t) {
+		super(t);
+		this.child = c;
+	}
+
+	public Expr getChild() {
+		return this.child;
+	}
+
+	public void setChild(Expr c) {
+		this.child = c;
+	}
+
+	public String toStringTree() {
+		if (child==null ) return this.toString();
+		StringBuilder buf = new StringBuilder();
+		buf.append("(" );
+		buf.append(this.toString());
+		buf.append(' ' );
+		buf.append(child.toStringTree());
+		buf.append(")" );
+		return buf.toString();
+		}
+}

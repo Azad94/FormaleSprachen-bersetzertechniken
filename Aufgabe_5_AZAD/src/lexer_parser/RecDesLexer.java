@@ -15,39 +15,53 @@ public class RecDesLexer extends Lexer {
 	public static final int RBRACK = 9;
 	public static final int EQUALS = 10;
 	public static final int NL = 11;
-	public static final int UMINUS = 12;	
-	
-	public static String[] tokenNames =  {"e/a", "EOF", "ID", "INTEGER", "PLUS", "MINUS", "MULTI", "DIV", "LBRACK", "RBRACK", "EQUALS", "NL", "UMINUS"};	
-	
+	public static final int UMINUS = 12;
+
+	public static String[] tokenNames = { "e/a", "EOF", "ID", "INTEGER", "PLUS", "MINUS", "MULTI", "DIV", "LBRACK",
+			"RBRACK", "EQUALS", "NL", "UMINUS" };
+
 	public RecDesLexer(String input) {
 		super(input);
 	}
 
 	@Override
 	public Token nextToken() {
-		while( c!=EOF){
-			switch( c ){
-				case ' ':case '\t':case'\r':	WS();continue;
-				case '+': return PLUS();
-				case '-': return MINUS();
-				case '*': return MULTI();
-				case '/': return DIV();
-				case '=': return EQUALS();
-				case '(': return LBRACK();
-				case ')': return RBRACK();
-				case '\n': return NL();
-				case '#': return UMINUS();
-				default:
-					if( isDIGIT() ){
-						return INTEGER();
-					}
-					if( isLETTER() ){
-						return ID();
-					}
-					throw new Error("Invalid Character: "+c);
+		while (c != EOF) {
+			switch (c) {
+			case ' ':
+			case '\t':
+			case '\r':
+				WS();
+				continue;
+			case '+':
+				return PLUS();
+			case '-':
+				return MINUS();
+			case '*':
+				return MULTI();
+			case '/':
+				return DIV();
+			case '=':
+				return EQUALS();
+			case '(':
+				return LBRACK();
+			case ')':
+				return RBRACK();
+			case '\n':
+				return NL();
+			case '#':
+				return UMINUS();
+			default:
+				if (isDIGIT()) {
+					return INTEGER();
+				}
+				if (isLETTER()) {
+					return ID();
+				}
+				throw new Error("Invalid Character: " + c);
 			}
 		}
-		return new Token(EOF_TYPE,"EOF");
+		return new Token(EOF_TYPE, "EOF");
 	}
 
 	private Token UMINUS() {
@@ -57,13 +71,13 @@ public class RecDesLexer extends Lexer {
 
 	private Token NL() {
 		consume();
-		return new Token(NL, "NL");		
+		return new Token(NL, "NL");
 	}
 
-	private Token EQUALS() {		
+	private Token EQUALS() {
 		consume();
 		return new Token(EQUALS, "=");
-		
+
 	}
 
 	private Token RBRACK() {
@@ -73,7 +87,7 @@ public class RecDesLexer extends Lexer {
 
 	private Token LBRACK() {
 		consume();
-		return new Token(LBRACK, "(");		
+		return new Token(LBRACK, "(");
 	}
 
 	private Token DIV() {
@@ -91,19 +105,18 @@ public class RecDesLexer extends Lexer {
 		return new Token(MINUS, "-");
 	}
 
-	private String rekID(String str){
-		if( isLETTER() || isDIGIT() ){
+	private String rekID(String str) {
+		if (isLETTER() || isDIGIT()) {
 			str = str + c;
 			consume();
 			return rekID(str);
-		}
-		else {
+		} else {
 			return str;
 		}
 	}
-	
+
 	private Token ID() {
-		return new Token(ID, rekID("") );	
+		return new Token(ID, rekID(""));
 	}
 
 	@Override
@@ -112,38 +125,36 @@ public class RecDesLexer extends Lexer {
 	}
 
 	private boolean isLETTER() {
-		return c>='a'&&c<='z' || c>='A'&&c<='Z'; 
+		return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
 	}
-	
-	private boolean isDIGIT(){
-		return (c >= '0' && c<='9');
+
+	private boolean isDIGIT() {
+		return (c >= '0' && c <= '9');
 	}
-	
-	private Token PLUS(){
+
+	private Token PLUS() {
 		consume();
 		return new Token(PLUS, "+");
 	}
-	
-	private String rekINTEGER( String str ){
-		if( isDIGIT() ){
+
+	private String rekINTEGER(String str) {
+		if (isDIGIT()) {
 			str = str + c;
 			consume();
 			return rekINTEGER(str);
-		}
-		else{
+		} else {
 			return str;
 		}
 	}
-	
-	private Token INTEGER(){
-		return new Token(INTEGER, rekINTEGER("") );		
-	}
-	
 
-    /** WS : (' '|'\t'|'\r')* ; // ignore any whitespace */
-    void WS() {
-        while ( c==' ' || c=='\t' || c=='\r' ) consume();
-    }
-	
+	private Token INTEGER() {
+		return new Token(INTEGER, rekINTEGER(""));
+	}
+
+	/** WS : (' '|'\t'|'\r')* ; // ignore any whitespace */
+	void WS() {
+		while (c == ' ' || c == '\t' || c == '\r')
+			consume();
+	}
 
 }

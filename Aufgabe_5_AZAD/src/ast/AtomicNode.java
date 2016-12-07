@@ -5,12 +5,14 @@ import lexer_parser.Token;
 public class AtomicNode extends ExprNode {
 
 	public AtomicNode(Token token) {
-		super(token);		
+		super(token);
 	}
 
 	@Override
-	public String toStringTree() {		
+	public String toStringTree() {
 		return this.toString();
 	}
+	
+
 
 }

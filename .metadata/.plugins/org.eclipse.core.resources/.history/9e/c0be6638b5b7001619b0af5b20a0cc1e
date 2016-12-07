@@ -1,0 +1,42 @@
+package recursiveDescent;
+
+import lexer_parser.ASTParser;
+import lexer_parser.RDLexer;
+import visitor.IndependentEvaluationVisitor;
+import visitor.IndependentToStringVisitor;
+import visitor.ToStringVisitor;
+
+public class Main {
+	public static void main(String args[]) {
+
+		//String result = new BufferedReader(new InputStreamReader(System.in)).lines().collect(Collectors.joining("\n"));
+
+		/*RDLexer lexer = new RDLexer("3+2*7-2\n");
+		
+		ASTParser parser = new ASTParser(lexer);
+		HeteroAST ast = parser.statlist();
+		System.out.println(ast.toStringTree());*/
+		
+		RDLexer lexer2 = new RDLexer("(3+2)*7-2\n");
+		ASTParser parser2 = new ASTParser(lexer2);
+		ToStringVisitor visitor = new ToStringVisitor();
+		parser2.statlist().accept(visitor);
+		System.out.println(visitor.getRet());
+		
+		RDLexer lexer3 = new RDLexer("(3+2)*7-2\n");
+		ASTParser parser3 = new ASTParser(lexer3);
+		EvaluationVisitor visitor2 = new EvaluationVisitor();
+		parser3.statlist().accept(visitor2);
+		System.out.println(visitor2.getRes());
+		
+		RDLexer lexer4 = new RDLexer("3+2*7-2\n");
+		ASTParser parser4 = new ASTParser(lexer4);
+		IndependentToStringVisitor indepVisitor = new IndependentToStringVisitor();
+		indepVisitor.print(parser4.statlist());
+		
+		RDLexer lexer5 = new RDLexer("3+2*7-2\n");
+		ASTParser parser5 = new ASTParser(lexer5);
+		IndependentEvaluationVisitor indepVisitor2 = new IndependentEvaluationVisitor();
+		System.out.println("\n" + indepVisitor2.eval(parser5.statlist()));
+	}
+}

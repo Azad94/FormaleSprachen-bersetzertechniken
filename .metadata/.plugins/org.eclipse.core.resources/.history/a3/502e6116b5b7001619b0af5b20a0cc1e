@@ -1,0 +1,10 @@
+package recursiveDescent;
+
+import ast.HeteroAST;
+
+public abstract class Expr extends HeteroAST {
+	public Expr(Token token) {
+		super(token);
+	}
+//	public abstract <T> void visit(Visitor<T> visitor);
+}

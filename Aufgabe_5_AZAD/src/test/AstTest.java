@@ -4,39 +4,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import ast.HeteroAST;
 import lexer_parser.*;
+import visitor.IndependentToStringVisitor;
 
 public class AstTest {
 
+	//" 3 + 4 + 5 * (5 / 4)\n"
 	@Test
-	public void test() {
-		Lexer lexer = new RecDesLexer("100 + 200\n");
-		RecDesParser parser = new RecDesParser(lexer);
-		HeteroAST ast = parser.statlist();
-		System.out.println(ast.toStringTree());
-		
-		lexer = new RecDesLexer("200 * 50\n");
-		parser = new RecDesParser(lexer);
-		ast = parser.statlist();
-		System.out.println(ast.toStringTree());
-		
-		lexer = new RecDesLexer("100 + 200 * 50\n");
-		parser = new RecDesParser(lexer);
-		ast = parser.statlist();
-		System.out.println(ast.toStringTree());
-
-		lexer = new RecDesLexer("(100 + 200) * 50\n");
-		parser = new RecDesParser(lexer);
-		ast = parser.statlist();
-		System.out.println(ast.toStringTree());
-		
-		lexer = new RecDesLexer("1 - 2 + (3 * 4) - 5\n");
-		parser = new RecDesParser(lexer);
-		ast = parser.statlist();
-		System.out.println(ast.toStringTree());
-		
-		lexer = new RecDesLexer("100 / variable\n");
-		parser = new RecDesParser(lexer);
-		ast = parser.statlist();
-		System.out.println(ast.toStringTree());
+	public void VTest(){
+		RecDesLexer lexer4 = new RecDesLexer("3+2*7-2\n");
+		RecDesParser parser4 = new RecDesParser(lexer4);
+		IndependentToStringVisitor i = new IndependentToStringVisitor();
+		i.print(parser4.statlist());
 	}
 }

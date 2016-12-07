@@ -1,0 +1,15 @@
+package recursiveDescent;
+
+import recursiveDescent.Expr;
+import recursiveDescent.Token;
+import recursiveDescent.Visitor;
+
+public class UMinus extends Unary {
+
+	public UMinus(Expr c, Token t) {
+		super(c, t);
+	}	
+	public <T> T accept(Visitor<T> Visitor) {
+		return Visitor.visit(this);
+	}
+}

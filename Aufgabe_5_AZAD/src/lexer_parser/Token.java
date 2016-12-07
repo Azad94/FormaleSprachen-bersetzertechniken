@@ -14,8 +14,15 @@ public class Token {
 	public int type;
 	public String text;
 	public Token(int type, String text) {this.type=type; this.text=text;}
+	
+	public int getType() {
+		return this.type;
+	}
+	public String getText(){
+		return this.text;
+	}
 	public String toString() {
-	String tname = RecDesLexer.tokenNames[type];
-	return "<'" +text+"'," +tname+">" ;
+		String tname = RecDesLexer.tokenNames[type];
+		return "<'" + text + "'," + tname + ">";
 	}
 }

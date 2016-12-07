@@ -1,6 +1,7 @@
 package ast;
 
 import lexer_parser.Token;
+import visitor.Visitor;
 
 public class MinusNode extends BinaryNode {
 
@@ -13,4 +14,7 @@ public class MinusNode extends BinaryNode {
 		super(left, addToken, right);
 	}
 
+	public <T> T accept(Visitor<T> Visitor) {
+		return Visitor.visit(this);
+	}
 }
