@@ -33,4 +33,7 @@
 <fullyQualifiedTypeName name="org.testng.Assert"/>
 <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
 <fullyQualifiedTypeName name="calc_interpreter.calc_interpreterParser"/>
+<fullyQualifiedTypeName name="calc_interpreter.calc_interpreterLexer"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 </qualifiedTypeNameHistroy>

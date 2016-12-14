@@ -1,0 +1,55 @@
+package Maximum;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+import Maximum.Error.IsysException;
+
+
+/**
+ * Created by Tim on 04.12.2016.
+ */
+public class Main {
+
+    public static final int BIG_SEARCH_RADIUS = 1;
+    public static final int INNER_SEARCH_RADIUS = 1;
+    //Radius fuer Methode CheckIfMaxima (erst mal auf 1 lassen bis variabler Wert implementiert)
+    public static final double MIN_DIFF_TO_MEDIUM_INNER_SEARCH = 10;            //Differenz die mindestens zum Mittelwert aller Nachbarn bestehen muss, um Maximum zu sein, in Prozent (INNER SEARCH)
+    public static final double MIN_DIFF_TO_MEDIUM_BIG_SEARCH = 10;             //Differenz die mindestens zum Mittelwert aller Nachbarn bestehen muss, um Maximum zu sein, in Prozent (BIG SEARCH)
+    public static final int TOLERATED_RADIUS_FOR_LABELS = 5;                   //Gibt an, in was für einem Radius Maximas um die eingetragenen Labels liegen dürfen, um gezählt zu werden
+    public static final String PATH_TO_DATA0 = Paths.get("", "data0.csv").toAbsolutePath().toString();
+    public static final String PATH_TO_DATA1 = Paths.get("","data1.csv").toAbsolutePath().toString();
+    public static final String PATH_TO_DATA2 = Paths.get("","data2.csv").toAbsolutePath().toString();
+    public static final String PATH_TO_LABEL0 = Paths.get("","label0.csv").toAbsolutePath().toString();
+    public static final String PATH_TO_LABEL1 = Paths.get("","label1.csv").toAbsolutePath().toString();
+    public static final String PATH_TO_LABEL2 = Paths.get("","label2.csv").toAbsolutePath().toString();
+
+    private static final String PATH_TO_OUTPUT = Paths.get("","output.csv").toAbsolutePath().toString();
+
+    public static void main(String[] args) throws IsysException{
+    	if(Files.notExists(Paths.get(PATH_TO_OUTPUT))){
+    		try {
+				Files.createFile(Paths.get(PATH_TO_OUTPUT));
+			} catch (IOException e) {
+				e.printStackTrace();
+				throw new IsysException("Konnte kein ouput erstellen",e);
+			}
+    	}
+        
+        Point[][] coordinates = Reader.getPointArrayfromCSV(PATH_TO_DATA0);
+        MaximaFinder maxfinder = new MaximaFinder(coordinates, BIG_SEARCH_RADIUS, INNER_SEARCH_RADIUS, MIN_DIFF_TO_MEDIUM_INNER_SEARCH, MIN_DIFF_TO_MEDIUM_BIG_SEARCH);
+        maxfinder.searchAll(coordinates[0][0]);
+        List<Point> peaks = maxfinder.getPeaks();
+        List<int[]> labels = Reader.getLabelsFromCSV(PATH_TO_LABEL0);
+        Compare compare = new Compare(TOLERATED_RADIUS_FOR_LABELS);
+        compare.compareLists(peaks, labels, coordinates);
+        System.out.println("Ausgabe aller Maxima (auch gleichhohe): ");
+        /*for (int[] p : labels){
+            System.out.println("x: " + p[0] + "   y: " + p[1]);
+        }*/
+        System.out.println(peaks.size());
+        System.out.println(compare.getPrecision()); //korrekt berechnet
+        System.out.println(compare.getRecall());    //klappt
+    }
+}

@@ -1,3 +1,5 @@
+package calculator;
+
 /***
  * Excerpted from "The Definitive ANTLR 4 Reference",
  * published by The Pragmatic Bookshelf.
@@ -9,24 +11,42 @@
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-import calculator.grammatik.*;
+import calc_interpreter.*;
+import calc_parse_tree.*;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
-public class calculator {
-    public static void main(String[] args) throws Exception {
+public class Calculator {
+   
+	public static void main(String[] args) throws Exception {
         String inputFile = null;
         if ( args.length>0 ) inputFile = args[0];
         InputStream is = System.in;
-        if ( inputFile!=null ) is = new FileInputStream(inputFile);
-        ANTLRInputStream input = new ANTLRInputStream(is);
-        LabeledExprLexer lexer = new LabeledExprLexer(input);
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-        LabeledExprParser parser = new LabeledExprParser(tokens);
-        ParseTree tree = parser.prog(); // parse
+        if ( inputFile!=null ) {
+            is = new FileInputStream(inputFile);
+        }
 
-        EvalVisitor eval = new EvalVisitor();
-        eval.visit(tree);
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
+        String expr = br.readLine();              // get first expression
+        int line = 1;                             // track input expr line numbers
+
+    calc_interpreterParser parser = new calc_interpreterParser(null); // share single parser instance
+      parser.setBuildParseTree(false);                  // don't need trees
+
+        while ( expr!=null ) {             // while we have more expressions
+            // create new lexer and token stream for each line (expression)
+            ANTLRInputStream input = new ANTLRInputStream(expr+"\n");
+            calc_interpreterLexer lexer = new calc_interpreterLexer(input);
+            lexer.setLine(line);           // notify lexer of input position
+            lexer.setCharPositionInLine(0);
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            parser.setInputStream(tokens); // notify parser of new token stream
+            parser.stat();                 // start the parser
+            expr = br.readLine();          // see if there's another line
+            line++;
+        }
     }
 }
