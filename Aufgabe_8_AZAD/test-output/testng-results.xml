@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="113" started-at="2016-12-14T14:22:00Z" finished-at="2016-12-14T14:22:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="113" started-at="2016-12-14T14:22:00Z" finished-at="2016-12-14T14:22:00Z">
+      <class name="calcTest.NewTest">
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="59" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 5 * 5
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="3" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ( 3 + 4 ) * 5
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[35]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="2" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 3 + 4 * 5
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="2" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 1 + 2  + (5 * 4) + 5
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[28]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="1" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5+2
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="1" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[--3+7
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="1" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3+-7*2
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[-11]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="2" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2^2^3
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[256]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="2" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2^2*2
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="1" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3<5^2
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="1" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2^8<10
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="4" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a = 5+2
+a+7
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="1" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="1" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a = 5+2
+#
+a+7
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, int)[pri:0, instance:calcTest.NewTest@8bd1b6a]" name="f" duration-ms="2" started-at="2016-12-14T15:22:00Z" data-provider="dp" finished-at="2016-12-14T15:22:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[195
+a = 5
+b = 6
+c = 2*a - b
+(a+b)* c
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[44]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- calcTest.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

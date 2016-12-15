@@ -1,0 +1,215 @@
+// Generated from LExpr.g4 by ANTLR 4.4
+package grammar;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.antlr.v4.runtime.tree.ParseTreeListener;
+
+/**
+ * This interface defines a complete listener for a parse tree produced by
+ * {@link LExprParser}.
+ */
+public interface LExprListener extends ParseTreeListener {
+	/**
+	 * Enter a parse tree produced by the {@code add}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterAdd(@NotNull LExprParser.AddContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code add}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitAdd(@NotNull LExprParser.AddContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code minus}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterMinus(@NotNull LExprParser.MinusContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code minus}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitMinus(@NotNull LExprParser.MinusContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code sub}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterSub(@NotNull LExprParser.SubContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code sub}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitSub(@NotNull LExprParser.SubContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code parens}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterParens(@NotNull LExprParser.ParensContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code parens}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitParens(@NotNull LExprParser.ParensContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code blank}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlank(@NotNull LExprParser.BlankContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code blank}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlank(@NotNull LExprParser.BlankContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code mul}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterMul(@NotNull LExprParser.MulContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code mul}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitMul(@NotNull LExprParser.MulContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code var}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterVar(@NotNull LExprParser.VarContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code var}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitVar(@NotNull LExprParser.VarContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code sma}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterSma(@NotNull LExprParser.SmaContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code sma}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitSma(@NotNull LExprParser.SmaContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code clear}
+	 * labeled alternative in {@link LExprParser#c}.
+	 * @param ctx the parse tree
+	 */
+	void enterClear(@NotNull LExprParser.ClearContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code clear}
+	 * labeled alternative in {@link LExprParser#c}.
+	 * @param ctx the parse tree
+	 */
+	void exitClear(@NotNull LExprParser.ClearContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code main}
+	 * labeled alternative in {@link LExprParser#p}.
+	 * @param ctx the parse tree
+	 */
+	void enterMain(@NotNull LExprParser.MainContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code main}
+	 * labeled alternative in {@link LExprParser#p}.
+	 * @param ctx the parse tree
+	 */
+	void exitMain(@NotNull LExprParser.MainContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code clean}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void enterClean(@NotNull LExprParser.CleanContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code clean}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void exitClean(@NotNull LExprParser.CleanContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code int}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterInt(@NotNull LExprParser.IntContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code int}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitInt(@NotNull LExprParser.IntContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code div}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterDiv(@NotNull LExprParser.DivContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code div}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitDiv(@NotNull LExprParser.DivContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code gre}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterGre(@NotNull LExprParser.GreContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code gre}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitGre(@NotNull LExprParser.GreContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code exp}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterExp(@NotNull LExprParser.ExpContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code exp}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitExp(@NotNull LExprParser.ExpContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code printExpr}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrintExpr(@NotNull LExprParser.PrintExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code printExpr}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrintExpr(@NotNull LExprParser.PrintExprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code assign}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssign(@NotNull LExprParser.AssignContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code assign}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssign(@NotNull LExprParser.AssignContext ctx);
+}

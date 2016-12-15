@@ -1,0 +1,133 @@
+// Generated from LExpr.g4 by ANTLR 4.4
+package grammar;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
+
+/**
+ * This interface defines a complete generic visitor for a parse tree produced
+ * by {@link LExprParser}.
+ *
+ * @param <T> The return type of the visit operation. Use {@link Void} for
+ * operations with no return type.
+ */
+public interface LExprVisitor<T> extends ParseTreeVisitor<T> {
+	/**
+	 * Visit a parse tree produced by the {@code add}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAdd(@NotNull LExprParser.AddContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code minus}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMinus(@NotNull LExprParser.MinusContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code sub}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSub(@NotNull LExprParser.SubContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code parens}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParens(@NotNull LExprParser.ParensContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code blank}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlank(@NotNull LExprParser.BlankContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code mul}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMul(@NotNull LExprParser.MulContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code var}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVar(@NotNull LExprParser.VarContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code sma}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSma(@NotNull LExprParser.SmaContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code clear}
+	 * labeled alternative in {@link LExprParser#c}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClear(@NotNull LExprParser.ClearContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code main}
+	 * labeled alternative in {@link LExprParser#p}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMain(@NotNull LExprParser.MainContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code clean}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClean(@NotNull LExprParser.CleanContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code int}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInt(@NotNull LExprParser.IntContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code div}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDiv(@NotNull LExprParser.DivContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code gre}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitGre(@NotNull LExprParser.GreContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code exp}
+	 * labeled alternative in {@link LExprParser#e}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExp(@NotNull LExprParser.ExpContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code printExpr}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPrintExpr(@NotNull LExprParser.PrintExprContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code assign}
+	 * labeled alternative in {@link LExprParser#s}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssign(@NotNull LExprParser.AssignContext ctx);
+}

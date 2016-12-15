@@ -2297,3 +2297,255 @@ Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/Tes
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-12-11 00:46:08.846
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2016-12-14 12:56:28.224 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-14 12:56:34.657
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-12-14 12:56:50.801
+!MESSAGE Launch configuration Main (3) references non-existing project Maxima.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Main (3) references non-existing project Maxima.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1408)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1283)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:226)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:207)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:552)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:425)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:309)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:783)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:930)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:98)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1355)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:81)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2016-12-14 12:56:50.802
+!MESSAGE Launch configuration Main (3) references non-existing project Maxima.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-12-14 12:56:50.825
+!MESSAGE Launch configuration Main (3) references non-existing project Maxima.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Main (3) references non-existing project Maxima.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1408)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1283)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:226)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:207)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:552)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:425)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:310)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:783)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:930)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:98)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1355)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:81)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2016-12-14 12:56:50.825
+!MESSAGE Launch configuration Main (3) references non-existing project Maxima.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-12-14 12:56:50.830
+!MESSAGE Launch configuration Main (3) references non-existing project Maxima.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration Main (3) references non-existing project Maxima.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1408)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1283)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:226)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:207)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2161)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:384)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:250)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:220)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:173)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:311)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:783)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:930)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:98)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1355)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:81)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2016-12-14 12:56:50.830
+!MESSAGE Launch configuration Main (3) references non-existing project Maxima.
+
+!ENTRY org.testng.eclipse 1 0 2016-12-14 13:06:26.660
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51071 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse-663423100/testng-customsuite.xml
+java -ea -classpath /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 51071 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse-663423100/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-12-14 13:06:56.255
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51073 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse-1312909891/testng-customsuite.xml
+java -ea -classpath /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 51073 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse-1312909891/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-12-14 13:13:05.629
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51090 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse--766381555/testng-customsuite.xml
+java -ea -classpath /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 51090 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse--766381555/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-12-14 13:14:25.706
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51098 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse-283921646/testng-customsuite.xml
+java -ea -classpath /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/build/classes:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 51098 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_7_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse-283921646/testng-customsuite.xml
+
+!ENTRY com.objectaid.uml @ com.objectaid.uml.java.JavaElementFactory.createIdentifier(196) 4 0 2016-12-14 15:21:30.610
+!MESSAGE ! understands( javaElement ): null
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.ltk.core.refactoring 4 10009 2016-12-14 15:21:30.614
+!MESSAGE Participant 'JavaRenameParticipant' removed due to the following exception
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2016-12-14 15:21:31.203
+!MESSAGE Internal Error
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 4 2016-12-14 15:21:31.205
+!MESSAGE ! understands( javaElement ): null
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.testng.eclipse 1 0 2016-12-14 15:22:00.405
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_8_AZAD/build/classes /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51969 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_8_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse--1519274453/testng-customsuite.xml
+java -ea -classpath /Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng-remote.jar:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_8_AZAD/build/classes:/Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/antlr-4.4-complete.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/testng.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/jcommander.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/bsh-2.0b4.jar:/Users/Sheraz/.p2/pool/plugins/org.testng.eclipse_6.10.0.201612030230/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 51969 -protocol json -d /Users/Sheraz/Documents/Uni/5. Semester/Übersetzertechniken und Formale Sprachen/Eclipse/Workspace/Aufgabe_8_AZAD/test-output /var/folders/dl/_6hwkrk571bgm9yjqksqxdh80000gn/T/testng-eclipse--1519274453/testng-customsuite.xml
+!SESSION 2016-12-14 18:48:39.361 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-14 18:48:45.338
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-12-15 19:07:22.334 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-15 19:07:28.350
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
