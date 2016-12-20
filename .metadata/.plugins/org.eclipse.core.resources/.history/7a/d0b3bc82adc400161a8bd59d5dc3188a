@@ -1,0 +1,52 @@
+package graph;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
+
+import cymbol_grammar.CymbolLexer;
+import cymbol_grammar.CymbolParser;
+
+public class Main {
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+		String inputFile = null;
+		
+		if ( args.length>0 ) inputFile = args[0];
+        InputStream is = System.in;
+        if ( inputFile!=null ) {
+            try {
+				is = new FileInputStream(inputFile);
+				ANTLRInputStream input = new ANTLRInputStream(is);
+				CymbolLexer lexer = new CymbolLexer(input);
+				CommonTokenStream tokens = new CommonTokenStream(lexer);
+		        CymbolParser parser = new CymbolParser(tokens);
+		        parser.setBuildParseTree(true);
+		        
+		        ParseTree tree = parser.file();
+				
+		        // show tree in text form
+		        //System.out.println(tree.toStringTree(parser));
+		        
+		        ParseTreeWalker walker = new ParseTreeWalker();
+		        FunctionListener collector = new FunctionListener();
+		        
+		        walker.walk(collector, tree);
+				
+		        System.out.println(collector.graph.toString());
+		        System.out.println("Hello");
+		        //System.out.println(collector.graph.toDOT());
+		        
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }  
+	}
+}

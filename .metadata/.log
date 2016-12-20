@@ -2549,3 +2549,135 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2016-12-15 19:07:28.350
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-12-17 04:50:11.472 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-17 04:50:17.615
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-12-17 18:00:15.470 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-17 18:00:28.215
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-12-17 18:54:14.471 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-17 18:54:21.214
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.objectaid.uml @ com.objectaid.uml.java.JavaElementFactory.createIdentifier(196) 4 0 2016-12-17 19:22:34.839
+!MESSAGE ! understands( javaElement ): null
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.ltk.core.refactoring 4 10009 2016-12-17 19:22:34.871
+!MESSAGE Participant 'JavaRenameParticipant' removed due to the following exception
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2016-12-17 19:22:35.246
+!MESSAGE Internal Error
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 4 2016-12-17 19:22:35.248
+!MESSAGE ! understands( javaElement ): null
+!STACK 0
+com.objectaid.uml.UMLException: ! understands( javaElement ): null
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:196)
+	at com.objectaid.uml.java.JavaElementFactory.createIdentifier(JavaElementFactory.java:65)
+	at com.objectaid.uml.util.LanguageHelper.getLanguageElementHandle(LanguageHelper.java:58)
+	at com.objectaid.uml.model.refactor.LanguageElementIdentifierChange.perform(LanguageElementIdentifierChange.java:139)
+	at com.objectaid.uml.model.refactor.CommandChange.perform(CommandChange.java:129)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at com.objectaid.uml.model.refactor.CompositeDiagramChange.perform(CompositeDiagramChange.java:43)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2016-12-20 20:35:53.847 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Sheraz/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-20 20:36:24.208
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

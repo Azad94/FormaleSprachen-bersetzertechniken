@@ -1,0 +1,145 @@
+// Generated from Syntax.g4 by ANTLR 4.4
+package grammar;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.antlr.v4.runtime.tree.ParseTreeListener;
+
+/**
+ * This interface defines a complete listener for a parse tree produced by
+ * {@link SyntaxParser}.
+ */
+public interface SyntaxListener extends ParseTreeListener {
+	/**
+	 * Enter a parse tree produced by {@link SyntaxParser#potency}.
+	 * @param ctx the parse tree
+	 */
+	void enterPotency(@NotNull SyntaxParser.PotencyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SyntaxParser#potency}.
+	 * @param ctx the parse tree
+	 */
+	void exitPotency(@NotNull SyntaxParser.PotencyContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SyntaxParser#comparison}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparison(@NotNull SyntaxParser.ComparisonContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SyntaxParser#comparison}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparison(@NotNull SyntaxParser.ComparisonContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SyntaxParser#prod}.
+	 * @param ctx the parse tree
+	 */
+	void enterProd(@NotNull SyntaxParser.ProdContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SyntaxParser#prod}.
+	 * @param ctx the parse tree
+	 */
+	void exitProd(@NotNull SyntaxParser.ProdContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code comparisonStat}
+	 * labeled alternative in {@link SyntaxParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparisonStat(@NotNull SyntaxParser.ComparisonStatContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code comparisonStat}
+	 * labeled alternative in {@link SyntaxParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparisonStat(@NotNull SyntaxParser.ComparisonStatContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code brackSum}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterBrackSum(@NotNull SyntaxParser.BrackSumContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code brackSum}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitBrackSum(@NotNull SyntaxParser.BrackSumContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SyntaxParser#statlist}.
+	 * @param ctx the parse tree
+	 */
+	void enterStatlist(@NotNull SyntaxParser.StatlistContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SyntaxParser#statlist}.
+	 * @param ctx the parse tree
+	 */
+	void exitStatlist(@NotNull SyntaxParser.StatlistContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code uminusTerm}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterUminusTerm(@NotNull SyntaxParser.UminusTermContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code uminusTerm}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitUminusTerm(@NotNull SyntaxParser.UminusTermContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SyntaxParser#sum}.
+	 * @param ctx the parse tree
+	 */
+	void enterSum(@NotNull SyntaxParser.SumContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SyntaxParser#sum}.
+	 * @param ctx the parse tree
+	 */
+	void exitSum(@NotNull SyntaxParser.SumContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code integer}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterInteger(@NotNull SyntaxParser.IntegerContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code integer}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitInteger(@NotNull SyntaxParser.IntegerContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code id}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterId(@NotNull SyntaxParser.IdContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code id}
+	 * labeled alternative in {@link SyntaxParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitId(@NotNull SyntaxParser.IdContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code assignStat}
+	 * labeled alternative in {@link SyntaxParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignStat(@NotNull SyntaxParser.AssignStatContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code assignStat}
+	 * labeled alternative in {@link SyntaxParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignStat(@NotNull SyntaxParser.AssignStatContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code nlStat}
+	 * labeled alternative in {@link SyntaxParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void enterNlStat(@NotNull SyntaxParser.NlStatContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code nlStat}
+	 * labeled alternative in {@link SyntaxParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void exitNlStat(@NotNull SyntaxParser.NlStatContext ctx);
+}

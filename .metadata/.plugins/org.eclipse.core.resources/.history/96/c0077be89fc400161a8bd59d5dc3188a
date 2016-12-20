@@ -1,0 +1,117 @@
+// Generated from Cymbol.g4 by ANTLR 4.4
+package cymbol_grammar;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
+
+/**
+ * This interface defines a complete generic visitor for a parse tree produced
+ * by {@link CymbolParser}.
+ *
+ * @param <T> The return type of the visit operation. Use {@link Void} for
+ * operations with no return type.
+ */
+public interface CymbolVisitor<T> extends ParseTreeVisitor<T> {
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#functionDecl}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunctionDecl(@NotNull CymbolParser.FunctionDeclContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code statFuncCall}
+	 * labeled alternative in {@link CymbolParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatFuncCall(@NotNull CymbolParser.StatFuncCallContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code statVarDecl}
+	 * labeled alternative in {@link CymbolParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatVarDecl(@NotNull CymbolParser.StatVarDeclContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitType(@NotNull CymbolParser.TypeContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code statAssignment}
+	 * labeled alternative in {@link CymbolParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatAssignment(@NotNull CymbolParser.StatAssignmentContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code statBlock}
+	 * labeled alternative in {@link CymbolParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatBlock(@NotNull CymbolParser.StatBlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#file}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFile(@NotNull CymbolParser.FileContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#exprList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprList(@NotNull CymbolParser.ExprListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#formalParameters}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFormalParameters(@NotNull CymbolParser.FormalParametersContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlock(@NotNull CymbolParser.BlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpr(@NotNull CymbolParser.ExprContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code statIf}
+	 * labeled alternative in {@link CymbolParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatIf(@NotNull CymbolParser.StatIfContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code statReturn}
+	 * labeled alternative in {@link CymbolParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatReturn(@NotNull CymbolParser.StatReturnContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#varDecl}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVarDecl(@NotNull CymbolParser.VarDeclContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CymbolParser#formalParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFormalParameter(@NotNull CymbolParser.FormalParameterContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code statFor}
+	 * labeled alternative in {@link CymbolParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatFor(@NotNull CymbolParser.StatForContext ctx);
+}

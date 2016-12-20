@@ -1,0 +1,16 @@
+package graph;
+
+import java.util.Set;
+
+import org.antlr.v4.runtime.misc.MultiMap;
+import org.antlr.v4.runtime.misc.OrderedHashSet;
+
+class CallGraph {
+
+	Set<String> nodes = new OrderedHashSet<String>();
+	MultiMap<String, String> edges = new MultiMap<String, String>();
+	
+	public void edge(String source, String target) {
+        edges.map(source, target);
+    }
+}
